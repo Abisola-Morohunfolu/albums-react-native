@@ -1,0 +1,17 @@
+{
+  "name": "albums",
+  "displayName": "albums",
+  "expo": {
+    "name": "albums",
+    "slug": "albums",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
