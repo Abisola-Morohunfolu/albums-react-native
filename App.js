@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Platform, StyleSheet, Text, View } from 'react-native';
 import Header from './src/components/header';
+import AlbumList from './src/components/AlbumList';
 
 const instructions = Platform.select({
 	ios: `Press Cmd+R to reload,\nCmd+D or shake for dev menu`,
@@ -9,12 +10,10 @@ const instructions = Platform.select({
 
 export default function App() {
 	return (
-		// <View style={styles.container}>
-		<Header headerText="Albums" />
-		// {/* <Text style={styles.welcome}>Welcome to React Native!</Text>
-		// <Text style={styles.instructions}>Are you feeling good tonught?</Text>
-		// <Text style={styles.instructions}>{instructions}</Text> */}
-		// </View>
+		<View>
+			<Header headerText="Albums" />
+			<AlbumList />
+		</View>
 	);
 }
 
