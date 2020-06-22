@@ -1,6 +1,6 @@
 // import React, { Component } from 'react';
 import React, { useState, useEffect } from 'react';
-import { View, Text } from 'react-native';
+import { ScrollView, Text } from 'react-native';
 import axios from 'axios';
 import AlbumDetail from './AlbumDetail';
 import albumDetail from './AlbumDetail';
@@ -37,26 +37,15 @@ const AlbumList = () => {
 
 	//render album list
 	const renderAlbums = () => {
-		return albumsData.albums.map((album) => <AlbumDetail key={album.title} title={album.title} />);
+		return albumsData.albums.map((album) => <AlbumDetail key={album.title} album={album} />);
 	};
 
 	return (
-		<View>
-			<Text>Album List!!!</Text>
+		<ScrollView>
 			{albumsData.loading ? <Text>Loading...</Text> : null}
 			{albumsData.albums === null ? null : renderAlbums()}
-		</View>
+		</ScrollView>
 	);
 };
-
-// class AlbumList extends Component {
-// 	render() {
-// 		return (
-// 			<View>
-// 				<Text>Album List!!!</Text>
-// 			</View>
-// 		);
-// 	}
-// }
 
 export default AlbumList;

@@ -10,7 +10,7 @@ const instructions = Platform.select({
 
 export default function App() {
 	return (
-		<View>
+		<View style={{ flex: 1 }}>
 			<Header headerText="Albums" />
 			<AlbumList />
 		</View>
